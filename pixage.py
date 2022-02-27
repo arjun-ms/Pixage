@@ -13,6 +13,27 @@ def topng(path: str):
         image.save(f"{file}.png")
     else:
         typer.secho("Pass a JPEG or JPG file.", fg=typer.colors.RED)
+
+@app.command()
+def reduce(path: str,percent: int):
+    image = Image.open(path)
+    percent = percent/100
+    resized_img = image.resize((round(image.size[0]*percent),round(image.size[1]*percent)))
+    file, ext = os.path.splitext(path)
+    print(file,ext)
+    resized_img.save(f"{file}_reduced{ext}")
+    typer.secho("Image Size Reduction Has Done Successfully! 👍", fg=typer.colors.GREEN)
+
+
+@app.command()
+def enlarge(path: str,percent: int):
+    image = Image.open(path)
+    percent = percent/100
+    resized_img = image.resize((round(image.size[0]/percent),round(image.size[1]/percent)))
+    file, ext = os.path.splitext(path)
+    print(file,ext)
+    resized_img.save(f"{file}_enlarged{ext}")
+    typer.secho("Image Size Enlargment Has Done Successfully! 👍", fg=typer.colors.GREEN)
 # def main():
     
 #     typer.secho("Welcome to Pixage.", fg=typer.colors.MAGENTA)
