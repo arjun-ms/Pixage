@@ -37,9 +37,9 @@ def tojpg(path: str):
 
 
 @app.command()
-def reduce(path: str, percent: int):
+def reduce(path: str, factor: int):
     image = Image.open(path)
-    resized_img = image.resize((round(image.size[0]/percent), round(image.size[1]/percent)))
+    resized_img = image.resize((round(image.size[0]/factor), round(image.size[1]/factor)))
     file, ext = os.path.splitext(path)
     print(file, ext)
     resized_img.save(f"{file}_reduced{ext}")
@@ -48,9 +48,9 @@ def reduce(path: str, percent: int):
 
 
 @app.command()
-def enlarge(path: str, percent: int):
+def enlarge(path: str, factor: int):
     image = Image.open(path)
-    resized_img = image.resize((round(image.size[0]*percent), round(image.size[1]*percent)))
+    resized_img = image.resize((round(image.size[0]*factor), round(image.size[1]*factor)))
     file, ext = os.path.splitext(path)
     print(file, ext)
     resized_img.save(f"{file}_enlarged{ext}")
@@ -61,11 +61,17 @@ def enlarge(path: str, percent: int):
 @app.command()
 def help():
     typer.secho('''⓵ pixage.py topng [FILEPATH] - To Convert JPEG or JPG image to PNG format.
-    ⓶ pixage.py tojpg [FILEPATH] - To Convert PNG image to JPEG or JPG format.
-    ⓷ pixage.py reduce [FILEPATH] [PERCENTAGE] - To reduce/shrink the size of the image.
-    ⓸ pixage.py enlarge [FILEPATH] [PERCENTAGE] - To enlarge/increase the size of the image.
-    ⓹ pixage.py help - To guide you.''',
-    fg=typer.colors.GREEN)
+
+⓶ pixage.py tojpg [FILEPATH] - To Convert PNG image to JPEG or JPG format.
+
+⓷ pixage.py reduce [FILEPATH] [FACTOR] - To reduce/shrink the size of the image by a factor. 
+    Eg : pixage reduce /home/abc/efg/pic.jpeg 2 - reduces the image size by half.
+
+⓸ pixage.py enlarge [FILEPATH] [FACTOR] - To enlarge/increase the size of the image by a factor.
+    Eg : pixage enlarge /home/abc/efg/pic.jpeg 2 - enlarges the image size by 2x.
+
+⓹ pixage.py help - To guide you.''',
+    fg=typer.colors.BRIGHT_BLUE,bold=True)
 
 
 
