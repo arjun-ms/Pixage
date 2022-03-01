@@ -39,8 +39,7 @@ def tojpg(path: str):
 @app.command()
 def reduce(path: str, percent: int):
     image = Image.open(path)
-    percent = percent/100
-    resized_img = image.resize((round(image.size[0]*percent), round(image.size[1]*percent)))
+    resized_img = image.resize((round(image.size[0]/percent), round(image.size[1]/percent)))
     file, ext = os.path.splitext(path)
     print(file, ext)
     resized_img.save(f"{file}_reduced{ext}")
@@ -51,8 +50,7 @@ def reduce(path: str, percent: int):
 @app.command()
 def enlarge(path: str, percent: int):
     image = Image.open(path)
-    percent = percent/100
-    resized_img = image.resize((round(image.size[0]/percent), round(image.size[1]/percent)))
+    resized_img = image.resize((round(image.size[0]*percent), round(image.size[1]*percent)))
     file, ext = os.path.splitext(path)
     print(file, ext)
     resized_img.save(f"{file}_enlarged{ext}")
@@ -62,7 +60,7 @@ def enlarge(path: str, percent: int):
 
 @app.command()
 def help():
-    typer.secho('''    ⓵ pixage.py topng [FILEPATH] - To Convert JPEG or JPG image to PNG format.
+    typer.secho('''⓵ pixage.py topng [FILEPATH] - To Convert JPEG or JPG image to PNG format.
     ⓶ pixage.py tojpg [FILEPATH] - To Convert PNG image to JPEG or JPG format.
     ⓷ pixage.py reduce [FILEPATH] [PERCENTAGE] - To reduce/shrink the size of the image.
     ⓸ pixage.py enlarge [FILEPATH] [PERCENTAGE] - To enlarge/increase the size of the image.
@@ -73,8 +71,7 @@ def help():
 
 def options():
     print()
-    print()
-    
+
     typer.secho('''Select values :
                 1 - JPEG TO PNG 
                 2 - PNG TO JPEG
@@ -94,13 +91,13 @@ def options():
     elif(select == '3'):
         typer.secho("You have selected 3", fg=typer.colors.BRIGHT_GREEN)
         path = input(Fore.RED+"Paste the file path here: ")
-        percent = int(input(Fore.RED+"Enlarge Percent: "))
+        percent = input(Fore.RED+"Paste the file path here: ")
         enlarge(path, percent)
 
     elif(select == '4'):
         typer.secho("You have selected 4", fg=typer.colors.BRIGHT_GREEN)
         path = input(Fore.RED+"Paste the file path here: ")
-        percent = int(input(Fore.RED+"Reduction Percent: "))
+        percent = input(Fore.RED+"Paste the file path here: ")
         reduce(path, percent)
     
     elif(select == '5'):
