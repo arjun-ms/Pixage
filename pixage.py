@@ -84,11 +84,11 @@ def options():
                 3 - ENLARGE IMAGE SIZE
                 4 - REDUCE IMAGE SIZE
                 5 - HELP''', fg=typer.colors.BRIGHT_YELLOW, bold=True)
-    select = input("➭")
+    select = input("➤")
 
     if(select == '1'):
         typer.secho("You have selected 1", fg=typer.colors.BRIGHT_GREEN)
-        path = input(Fore.RED+"Paste the file path here: ")
+        path = input(Fore.YELLOW+"Paste the file path here: ")
         topng(path)
 
     elif(select == '2'):
@@ -96,14 +96,14 @@ def options():
 
     elif(select == '3'):
         typer.secho("You have selected 3", fg=typer.colors.BRIGHT_GREEN)
-        path = input(Fore.RED+"Paste the file path here: ")
-        percent = input(Fore.RED+"Paste the file path here: ")
+        path = input(Fore.YELLOW+"Paste the file path here: ")
+        percent = int(input(Fore.YELLOW+"By how much times you want to enlarge: "))
         enlarge(path, percent)
 
     elif(select == '4'):
         typer.secho("You have selected 4", fg=typer.colors.BRIGHT_GREEN)
-        path = input(Fore.RED+"Paste the file path here: ")
-        percent = input(Fore.RED+"Paste the file path here: ")
+        path = input(Fore.YELLOW+"Paste the file path here: ")
+        percent = int(input(Fore.YELLOW+"By how much times you want to reduce: "))
         reduce(path, percent)
     
     elif(select == '5'):
