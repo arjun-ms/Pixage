@@ -120,7 +120,7 @@ def main():
         ██║     ██║██╔╝ ██╗██║  ██║╚██████╔╝███████╗
         ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
 
-        ████▓▒­░⡷⠂𝙰𝚞𝚝𝚑𝚘𝚛 : 𝙰𝚛𝚓𝚞𝚗 𝙼 𝚂 & Muhammed Ajmal M⠐⢾░▒▓████                                        
+    ███▓▒­░⡷⠂𝙰𝚞𝚝𝚑𝚘𝚛 : 𝓐𝓻𝓳𝓾𝓷 𝓜 𝓢 & 𝓜𝓾𝓱𝓪𝓶𝓶𝓮𝓭 𝓐𝓳𝓶𝓪𝓵 𝓜 ⠐⢾░▒▓██                                
     '''
     print(Fore.WHITE+Style.NORMAL+banner)
     typer.secho("Welcome to Pixage.", fg=typer.colors.BRIGHT_CYAN)
