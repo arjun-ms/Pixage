@@ -65,10 +65,10 @@ def help():
 ⓶ pixage.py tojpg [FILEPATH] - To Convert PNG image to JPEG or JPG format.
 
 ⓷ pixage.py reduce [FILEPATH] [FACTOR] - To reduce/shrink the size of the image by a factor. 
-    Eg : pixage reduce /home/abc/efg/pic.jpeg 2 - reduces the image size by half.
+    Eg : pixage reduce /home/abc/efg/pic.jpeg 2 ➭ reduces the image size by half.
 
 ⓸ pixage.py enlarge [FILEPATH] [FACTOR] - To enlarge/increase the size of the image by a factor.
-    Eg : pixage enlarge /home/abc/efg/pic.jpeg 2 - enlarges the image size by 2x.
+    Eg : pixage enlarge /home/abc/efg/pic.jpeg 2 ➭ enlarges the image size by 2x.
 
 ⓹ pixage.py help - To guide you.''',
     fg=typer.colors.BRIGHT_BLUE,bold=True)
@@ -78,7 +78,7 @@ def help():
 def options():
     print()
 
-    typer.secho('''Select values :
+    typer.secho('''Select any value :
                 1 - JPEG TO PNG 
                 2 - PNG TO JPEG
                 3 - ENLARGE IMAGE SIZE
