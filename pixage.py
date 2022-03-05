@@ -91,12 +91,12 @@ def options():
 
     if(select == '1'):
         typer.secho("You have selected 1", fg=typer.colors.BRIGHT_GREEN)
-        path = input(Fore.YELLOW+"Paste the file path here: ")
+        path = input(Fore.YELLOW+"Paste the file path here (without quotes): ")
         topng(path)
 
     elif(select == '2'):
         typer.secho("You have selected 2", fg=typer.colors.BRIGHT_GREEN)
-        path = input(Fore.YELLOW+"Paste the file path here: ")
+        path = input(Fore.YELLOW+"Paste the file path here (without quotes): ")
         tojpg(path)
 
     elif(select == '3'):
