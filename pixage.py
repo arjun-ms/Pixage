@@ -19,7 +19,8 @@ def topng(path: str):
         image.save(f"{file}.png")
         typer.secho("Image Converted to PNG and Saved! 👍", fg=typer.colors.GREEN)
     else:
-        typer.secho("Pass a JPEG or JPG file.", fg=typer.colors.RED)
+        typer.secho("Pass a JPEG or JPG file.", fg=typer.colors.RED,bold=True)
+        options()
     exit()
 
 
@@ -32,7 +33,8 @@ def tojpg(path: str):
         image.save(f"{file}.jpg")
         typer.secho("Image Converted to JPG and Saved! 👍", fg=typer.colors.GREEN)
     else:
-        typer.secho("Pass a PNG file.", fg=typer.colors.RED)
+        typer.secho("Pass a PNG file.", fg=typer.colors.RED,bold=True)
+        options()
     exit()
 
 
@@ -83,7 +85,8 @@ def options():
                 2 - PNG TO JPEG
                 3 - ENLARGE IMAGE SIZE
                 4 - REDUCE IMAGE SIZE
-                5 - HELP''', fg=typer.colors.BRIGHT_YELLOW, bold=True)
+                5 - HELP
+                6 - EXIT''', fg=typer.colors.BRIGHT_YELLOW, bold=True)
     select = input("➤")
 
     if(select == '1'):
@@ -93,25 +96,49 @@ def options():
 
     elif(select == '2'):
         typer.secho("You have selected 2", fg=typer.colors.BRIGHT_GREEN)
+        path = input(Fore.YELLOW+"Paste the file path here: ")
+        tojpg(path)
 
     elif(select == '3'):
         typer.secho("You have selected 3", fg=typer.colors.BRIGHT_GREEN)
         path = input(Fore.YELLOW+"Paste the file path here: ")
-        percent = int(input(Fore.YELLOW+"By how much times you want to enlarge: "))
+        if(path.lower().endswith(('.png','.jpg', '.jpeg'))):
+            pass
+        else:
+            typer.secho("Pass a PNG or JPEG or JPG file.", fg=typer.colors.RED,bold=True)
+            options()
+        try:
+            percent = int(input(Fore.YELLOW+"By how much times you want to enlarge: "))
+        except Exception:
+            typer.secho("Pass an Integer value.", fg=typer.colors.RED,bold=True)
+            options()
         enlarge(path, percent)
 
     elif(select == '4'):
         typer.secho("You have selected 4", fg=typer.colors.BRIGHT_GREEN)
         path = input(Fore.YELLOW+"Paste the file path here: ")
-        percent = int(input(Fore.YELLOW+"By how much times you want to reduce: "))
+        if(path.lower().endswith(('.png','.jpg', '.jpeg'))):
+            pass
+        else:
+            typer.secho("Pass a PNG or JPEG or JPG file.", fg=typer.colors.RED,bold=True)
+            options()
+        try:
+            percent = int(input(Fore.YELLOW+"By how much times you want to reduce: "))
+        except Exception:
+            typer.secho("Pass an Integer value.", fg=typer.colors.RED,bold=True)
+            options()
         reduce(path, percent)
     
     elif(select == '5'):
         help()
         options()
 
+    elif(select == '6'):
+        exit()
+
     else:
         typer.secho("You have given an invalid input ❌", fg=typer.colors.BRIGHT_RED, bold=True)
+        options()
 
 
 
