@@ -16,8 +16,8 @@ Team id here
 2. It enlarges and reduces images by multiplying dimensions
 
 ## Libraries used
-Pillow - 9.0.1
-typer - 0.4.0
+- Pillow - 9.0.1
+- typer - 0.4.0
 
 ## How to configure
 
