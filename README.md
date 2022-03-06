@@ -20,6 +20,8 @@ Team id here
 - typer - 0.4.0
 
 ## How to configure
-
+```console
+    git clone https://github.com/arjun-ms/Pixage.git
+```
 
 ## How to Run
