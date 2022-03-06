@@ -18,6 +18,7 @@ Team id here
 ## Libraries used
 - Pillow - 9.0.1
 - typer - 0.4.0
+- colorama==0.4.4
 
 ## How to configure
 1. Clone the Repository
