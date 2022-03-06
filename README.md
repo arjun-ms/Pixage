@@ -52,3 +52,24 @@ Team id here
 ```
 
 - Run (Direct CLI Commands)
+
+1. JPG to PNG
+``` console
+    pixage.py topng [FILEPATH]
+```
+2. PNG to JPG
+``` console
+    pixage.py tojpg [FILEPATH]
+```
+3. Reduce
+``` console
+    pixage.py reduce [FILEPATH] [FACTOR]
+```
+4. Enlarge
+``` console
+    pixage.py enlarge [FILEPATH] [FACTOR]
+```
+5. Help
+```console
+    pixage.py help
+```
