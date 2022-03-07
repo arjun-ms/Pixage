@@ -12,10 +12,10 @@
 2. Arjun M S [https://github.com/arjun-ms]
 
 ## Team Id
-Team id here
+Python/379
 
 ## Link to product walkthrough
-[![IMAGE ALT TEXT HERE](https://github.com/arjun-ms/Pixage/blob/main/thumbnail.png)](https://youtu.be/hd1hvQ09Vdc)
+https://user-images.githubusercontent.com/64315213/157034825-97951ab3-e8d4-489c-9cfe-0e40653acbd4.mp4
 
 ## How it Works ?
 1. It converts .jpg to .png and .png to .jpg by file naming
