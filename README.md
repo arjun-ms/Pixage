@@ -8,8 +8,8 @@
 
 
 ## Team members
-1. Muhammed Ajmal M [https://github.com/ajmalmohad]
-2. Arjun M S [https://github.com/arjun-ms]
+1. [Muhammed Ajmal M] [https://github.com/ajmalmohad]
+2. [Arjun M S] [https://github.com/arjun-ms]
 
 ## Team Id
 Python/379
