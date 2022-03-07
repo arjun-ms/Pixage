@@ -15,7 +15,7 @@
 Team id here
 
 ## Link to product walkthrough
-(https://youtu.be/hd1hvQ09Vdc)
+[![IMAGE ALT TEXT HERE](https://github.com/arjun-ms/Pixage/blob/main/thumbnail.png)](https://youtu.be/hd1hvQ09Vdc)
 
 ## How it Works ?
 1. It converts .jpg to .png and .png to .jpg by file naming
