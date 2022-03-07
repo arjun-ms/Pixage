@@ -15,7 +15,7 @@
 Team id here
 
 ## Link to product walkthrough
-(https://drive.google.com/file/d/1IMf8dwAo52RkexsHwfFYFuBp2WX79GU1/view?usp=sharing)
+(https://youtu.be/hd1hvQ09Vdc)
 
 ## How it Works ?
 1. It converts .jpg to .png and .png to .jpg by file naming
