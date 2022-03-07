@@ -62,17 +62,17 @@ def enlarge(path: str, factor: int):
 
 @app.command()
 def help():
-    typer.secho('''⓵ pixage.py topng [FILEPATH] - To Convert JPEG or JPG image to PNG format.
+    typer.secho('''⓵ python pixage.py topng [FILEPATH] - To Convert JPEG or JPG image to PNG format.
 
-⓶ pixage.py tojpg [FILEPATH] - To Convert PNG image to JPEG or JPG format.
+⓶ python pixage.py tojpg [FILEPATH] - To Convert PNG image to JPEG or JPG format.
 
-⓷ pixage.py reduce [FILEPATH] [FACTOR] - To reduce/shrink the size of the image by a factor. 
+⓷ python pixage.py reduce [FILEPATH] [FACTOR] - To reduce/shrink the size of the image by a factor. 
     Eg : pixage reduce /home/abc/efg/pic.jpeg 2 ➭ reduces the image size by half.
 
-⓸ pixage.py enlarge [FILEPATH] [FACTOR] - To enlarge/increase the size of the image by a factor.
+⓸ python pixage.py enlarge [FILEPATH] [FACTOR] - To enlarge/increase the size of the image by a factor.
     Eg : pixage enlarge /home/abc/efg/pic.jpeg 2 ➭ enlarges the image size by 2x.
 
-⓹ pixage.py help - To guide you.''',
+⓹ python pixage.py help - To guide you.''',
     fg=typer.colors.BRIGHT_BLUE,bold=True)
 
 
